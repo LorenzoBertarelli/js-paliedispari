@@ -1,23 +1,18 @@
-// L'UTENTE INSERISCE UNA PAROLA
-const UserWord = prompt(`Scrivi una parola e ti dirò se è un palindromo`);
-console.log(UserWord);
-
-// CREO UNA FUNZIONE PER CAPIRE SE LA PAROLA è UN PALINDORMO
-function isPalindormo(UserChoise) {
-    
-}
-
-
 // NUMERO SCELTO DALL'UTENTE DA 1 A 5
 const sceltaUtente = parseInt(prompt(`scegli pari o dispari con un numero da 1 a 5`));
 console.log(sceltaUtente);
 
-// NUMERO RANDOM PC DA 1 A 5
-const randomPC = Math.floor(Math.random() * 5) + 1;
-console.log(randomPC);
+// NUMERO RANDOM PC DA 1 A 5 NELLA FUNZIONE
+function numeroRandomPc() {
+    let numeroRandom = Math.floor(Math.random() * 5) + 1;
+    return numeroRandom;
+}
+
+let randomPc = numeroRandomPc();
+console.log(randomPc);
 
 // SOMMA NUMERI
-let sommaNumbers = sceltaUtente + randomPC;
+let sommaNumbers = sceltaUtente + randomPc;
 console.log(sommaNumbers); 
 
 // FUNZIONE PER DIRE SE è PARI O DISPARI
