@@ -1,8 +1,26 @@
-// L'UTENTE INSERISCE UNA PAROLA
-const UserWord = prompt(`Scrivi una parola e ti dirò se è un palindromo`);
-console.log(UserWord);
+// Chiedi all'utente di inserire una parola
+let parola = prompt("Inserisci una parola per scoprire se è palindorma:");
 
-// CREO UNA FUNZIONE PER CAPIRE SE LA PAROLA è UN PALINDORMO
-function isPalindormo(UserChoise) {
-    
+// Definisci una funzione per verificare se una parola è palindroma
+function isPalindroma(parola) {
+  // Converte la parola in un array di caratteri
+  let caratteri = parola.split("");
+  // Inverte l'array di caratteri
+  let caratteriInvertiti = caratteri.reverse();
+  // Converte l'array di caratteri invertiti in una stringa
+  let parolaInvertita = caratteriInvertiti.join("");
+  // Verifica se la parola invertita è uguale alla parola originale
+  if (parolaInvertita === parola) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Verifica se la parola inserita è palindroma e stampa un messaggio appropriato
+let risultatoElement = document.getElementById("result");
+if (isPalindroma(parola)) {
+  risultatoElement.innerHTML = parola + " è palindroma!";
+} else {
+  risultatoElement.innerHTML = parola + " non è palindroma.";
 }

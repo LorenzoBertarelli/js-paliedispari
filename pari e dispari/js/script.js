@@ -29,7 +29,7 @@ console.log(risultato);
 
 // Determina il vincitore
 if (risultato === sceltaUtente) {
-alert("Hai vinto! La somma è " + risultato + ".");
+    alert("Hai vinto! La somma è " + risultato + ".");
 } else {
-alert("Hai perso! La somma è " + risultato + ".");
+    alert("Hai perso! La somma è " + risultato + ".");
 }
